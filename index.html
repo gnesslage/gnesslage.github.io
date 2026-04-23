@@ -99,6 +99,43 @@
             color: #777;
         }
 
+        .image-container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        
+        .profile-img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(44, 62, 80, 0.8); /* Matches your navy theme */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.9rem;
+        }
+        
+        .image-container:hover .image-overlay {
+            opacity: 1;
+            cursor: pointer;
+        }
+
         @media (max-width: 600px) {
             .profile-section { flex-direction: column; text-align: center; }
             header p {
@@ -119,6 +156,7 @@
     
     <section id="about" class="profile-section">
         <img src="Photo%20Genny%20Nesslage%20portrait.jpg" alt="Professional portrait of Dr. Genny Nesslage, Associate Research Professor at UMCES" class="profile-img">
+        <div class="image-overlay">View Bio</div>
         <div>
             <h2>Biography</h2>
             <p>I am Associate Research Professor at the University of Maryland Center for Environmental Science Chesapeake Biological Laboratory. My research focuses on assessing fish and wildlife populations, modeling invasive species dynamics, and addressing resource management issues through the use of statistical modeling and estimation techniques. Prior to my appointment at UMCES, I served as Senior Stock Assessment Scientist for the Atlantic States Marine Fisheries Commission, and as Assistant Professor of Vertebrate Ecology at Clarion University.
